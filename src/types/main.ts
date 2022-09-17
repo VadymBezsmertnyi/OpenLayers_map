@@ -9,4 +9,5 @@ export interface IInitialState {
   farms: TFarm[];
   message: string;
   serverConnect: boolean;
+  loading: boolean;
 }

@@ -6,6 +6,7 @@ const initialState: IInitialState = {
   farms: [],
   message: '',
   serverConnect: true,
+  loading: true,
 };
 
 export const fetchFarm = createAsyncThunk('fetchFarm', () => {
@@ -24,6 +25,12 @@ const mainReducer = createSlice({
       .addCase(fetchFarm.fulfilled, (state, action) => {
         const { payload } = action;
         state.farms = payload;
+        state.serverConnect = true;
+        state.loading = false;
+      })
+      .addCase(fetchFarm.pending, (state) => {
+        state.serverConnect = true;
+        state.loading = true;
       })
       .addCase(fetchFarm.rejected, (state, action) => {
         state.message = action.error.message || '';
