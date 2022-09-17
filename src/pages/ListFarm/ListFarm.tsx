@@ -14,6 +14,7 @@ const ListFarm = () => {
       {farms.length ? (
         farms.map(({ id, name, description }: TFarm) => (
           <CardFarm
+            key={`farmCard_${id}`}
             name={name}
             description={description}
             selectCard={() => console.log(id)}
