@@ -13,23 +13,33 @@ const ListFarm = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.containerCards}>
-      {loading ? (
-        Array.from(Array(9).keys()).map((_empty, i) => (
-          <Skeleton key={`skeleton_${i}`} variant="rounded" width={300} height={170} />
-        ))
-      ) : !loading && farms.length ? (
-        farms.map(({ id, name, description }: TFarm) => (
-          <CardFarm
-            key={`farmCard_${id}`}
-            name={name}
-            description={description}
-            selectCard={() => navigate(`/details/${id}`)}
-          />
-        ))
-      ) : (
-        <Typography>Sorry, list empty</Typography>
-      )}
+    <Box className={classes.containerList}>
+      <Typography className={classes.titleList} variant="h2">
+        Farm sensors
+      </Typography>
+      <Box className={classes.containerCards}>
+        {loading ? (
+          Array.from(Array(9).keys()).map((_empty, i) => (
+            <Skeleton
+              key={`skeleton_${i}`}
+              variant="rounded"
+              width={300}
+              height={170}
+            />
+          ))
+        ) : !loading && farms.length ? (
+          farms.map(({ id, name, description }: TFarm) => (
+            <CardFarm
+              key={`farmCard_${id}`}
+              name={name}
+              description={description}
+              selectCard={() => navigate(`/details/${id}`)}
+            />
+          ))
+        ) : (
+          <Typography>Sorry, list empty</Typography>
+        )}
+      </Box>
     </Box>
   );
 };

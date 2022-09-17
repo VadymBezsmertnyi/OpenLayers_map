@@ -14,8 +14,8 @@
       "name": "Weather station",
       "description": "Plan your agro acvities according to all meteorological conditions on one rod.",
       "coordinates": [
-        14.217792,
-        50.371542
+        12.217792,
+        53.371542
       ]
     },
     {
@@ -24,7 +24,7 @@
       "description": "Make sure your harvest is well stored inside your storage halls to avoid any pests and diseases threats.",
       "coordinates": [
         14.221525,
-        50.374929
+        55.374929
       ]
     },
     {
@@ -32,8 +32,8 @@
       "name": "Soil sensor",
       "description": "Check soil humidity and temperature to manage your irrigation effectively and save on cost.",
       "coordinates": [
-        14.205785,
-        50.364011
+        13.205785,
+        56.364011
       ]
     }
   ]

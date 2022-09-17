@@ -20,7 +20,11 @@ const CardFarm = ({ name, description, selectCard }: ICardFarmProps) => {
   return (
     <Card className={classes.containerCard}>
       <CardContent>
-        <Typography sx={{ fontSize: 16 }} color="text.secondary" gutterBottom>
+        <Typography
+          className={classes.titleCard}
+          color="text.secondary"
+          gutterBottom
+        >
           {name}
         </Typography>
         <Typography variant="body2">{description}</Typography>

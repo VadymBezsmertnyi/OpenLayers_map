@@ -1,7 +1,8 @@
 import { Box } from '@mui/material';
 
+import { HeaderDetails, MapDetails } from 'components';
+
 import useStyles from './DetailsFarm.styles';
-import { HeaderDetails } from 'components';
 
 const DetailsFarm = () => {
   const classes = useStyles();
@@ -9,6 +10,7 @@ const DetailsFarm = () => {
   return (
     <Box className={classes.containerDetails}>
       <HeaderDetails />
+      <MapDetails />
     </Box>
   );
 };

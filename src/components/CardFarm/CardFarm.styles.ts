@@ -7,6 +7,10 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'space-between',
     width: '300px',
   },
+  titleCard: {
+    fontFamily: 'ui-rounded',
+    fontSize: 22,
+  },
 }));
 
 export default useStyles;

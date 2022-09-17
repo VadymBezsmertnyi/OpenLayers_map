@@ -28,9 +28,9 @@ const HeaderDetails = () => {
         Back to home
       </Button>
       {loading ? (
-        <Skeleton variant="text" sx={{ fontSize: '1.5rem' }} width={150} />
+        <Skeleton variant="text" sx={{ fontSize: '2.125rem' }} width={150} />
       ) : (
-        <Typography variant={'h5'} className={classes.nameTitle}>
+        <Typography variant={'h4'} className={classes.nameTitle}>
           {selectFarm?.name}
         </Typography>
       )}

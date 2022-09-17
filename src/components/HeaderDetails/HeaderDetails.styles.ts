@@ -8,9 +8,15 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '5px',
+
+    '@media (max-width: 350px)': {
+      justifyContent: 'center',
+    },
   },
   buttonBack: {},
-  nameTitle: {},
+  nameTitle: {
+    fontFamily: 'ui-rounded',
+  },
   containerCoordinates: {
     display: 'flex',
     flexDirection: 'column',

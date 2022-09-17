@@ -2,7 +2,7 @@ export type TFarm = {
   id: string;
   name: string;
   description: string;
-  coordinates: [number, number];
+  coordinates: number[];
 };
 
 export interface IInitialState {
