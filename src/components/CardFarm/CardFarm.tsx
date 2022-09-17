@@ -27,7 +27,7 @@ const CardFarm = ({ name, description, selectCard }: ICardFarmProps) => {
       </CardContent>
       <CardActions>
         <Button size="small" onClick={selectCard}>
-          Learn More
+          details
         </Button>
       </CardActions>
     </Card>

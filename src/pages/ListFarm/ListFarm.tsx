@@ -1,12 +1,15 @@
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
 
 import { CardFarm } from 'components';
 import { IInitialState, TFarm } from 'types/main';
+
 import useStyles from './ListFarm.styles';
 
 const ListFarm = () => {
   const { farms } = useSelector((state: IInitialState) => state);
+  const navigate = useNavigate();
   const classes = useStyles();
 
   return (
@@ -17,7 +20,7 @@ const ListFarm = () => {
             key={`farmCard_${id}`}
             name={name}
             description={description}
-            selectCard={() => console.log(id)}
+            selectCard={() => navigate(`/details/${id}`)}
           />
         ))
       ) : (
